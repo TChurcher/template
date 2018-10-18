@@ -1,0 +1,29 @@
+.footer {
+  background: var(--color_back);
+  height: fit-content;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid var(--lines);
+  margin: 35px 0px 0px 0px;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.grid-footer > div {
+  text-align: center;
+  padding: 3px 0px 0px 0px;
+  font-size: 30px;
+}
+
+.footer1 {
+  background: var(--color_back);
+}
+
+.footer2 {
+  background: var(--dark_back);
+}

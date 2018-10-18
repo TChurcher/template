@@ -1,0 +1,41 @@
+.main {
+  background: var(--light_back);
+  min-height: 80vh;
+}
+
+.grid-main {
+  display: grid;
+  grid-template-columns: 0fr 1fr 0fr;
+  grid-template-rows: 100%;
+  grid-gap: 0px;
+  padding: 0px 0px 0px 0px;
+  width: 100%;
+}
+
+.grid-main > div {
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  font-size: 30px;
+}
+
+.grid-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.grid-inner > div {
+  text-align: center;
+  padding: 0px 0;
+  font-size: 30px;
+}
+
+.main2 {
+  background: var(--light_back);
+}
+
+.main1,
+.main3 {
+  background: var(--dark_back);
+}

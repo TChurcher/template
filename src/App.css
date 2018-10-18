@@ -1,0 +1,93 @@
+:root {
+  --color_back: #fafafa;
+  --light_back: #ffffff;
+  --dark_back: #394648;
+
+  --dark_text: #222222;
+  --light_text: #fafafa;
+
+  --lines: #d7d7d7;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--light_back);
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button {
+  background: var(--color_back);
+  border: none;
+  color: var(--light_text);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+span {
+  background: var(--dark_back);
+  border: none;
+  color: var(--light_text);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.a-navi {
+  font-size: 14px;
+  color: var(--dark_text);
+  padding: 0px 0px 0px 0px;
+  border-bottom: 1px solid var(--lines);
+  margin: 0px 7px 0px 7px;
+  white-space: nowrap;
+}
+
+.a-navi:hover {
+  color: var(--dark_text);
+  border-bottom: 2px solid var(--dark_text);
+  text-decoration: none;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
