@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "fire": "firebase login && firebase init",
     "deploy": "react-scripts build && firebase deploy",
-    "push": "git add -A && git commit -m 'generic: npm push' && git push",
+    "push": "git add -A && git commit -m 'generic: npm push' && git push || true",
     "pull": "git pull"
   },
   "devDependencies": {
