@@ -12,7 +12,7 @@ class Footer extends Component {
             <a className="a-navi" href="/impressum">
               Impressum
             </a>
-            <a className="a-navi" href="/datenschutz">
+            <a className="a-navi" href="/datasecurity">
               Datenschutz
             </a>
           </div>

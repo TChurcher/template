@@ -9,10 +9,11 @@ class Home extends Component {
     meta: this.props.meta,
     title: this.props.title
   };
+
   render() {
     return (
       <React.Fragment>
-        <Header title={this.state.title} />
+        <Header title={this.props.title} />
         <Main>
           <Container title="This is Doggy." footer="Doggy is a good boy.">
             <img

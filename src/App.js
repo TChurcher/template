@@ -6,6 +6,7 @@ import Impressum from "./views/impressum/impressum";
 import Home from "./views/home/home";
 import Login from "./views/login/login";
 import SignUp from "./views/signup/signup";
+import DataSecurity from "./views/datasecurity/datasecurity";
 
 import { firebase } from "./firebase";
 
@@ -14,7 +15,7 @@ class App extends Component {
     meta: {
       company_name: "FIRMA GmbH"
     },
-    authUser: null
+    authUser: "Home"
   };
 
   render() {
@@ -26,7 +27,7 @@ class App extends Component {
             path="/"
             render={() => (
               <div className="App">
-                <Home meta={this.state.meta} title={this.state.meta.authUser} />
+                <Home meta={this.state.meta} title={this.state.authUser} />
               </div>
             )}
           />
@@ -57,6 +58,15 @@ class App extends Component {
               </div>
             )}
           />
+          <Route
+            exact={true}
+            path="/datasecurity"
+            render={() => (
+              <div className="App">
+                <DataSecurity meta={this.state.meta} title="Data Security" />
+              </div>
+            )}
+          />
         </div>
       </BrowserRouter>
     );
@@ -65,15 +75,19 @@ class App extends Component {
   componentDidMount() {
     firebase.auth().onAuthStateChanged(authUser => {
       authUser
-        ? this.setState({ authUser: "yas" })
+        ? this.setState({ authUser: firebase.auth().currentUser.email })
         : this.setState({ authUser: null });
       if (firebase.auth().currentUser) {
-        console.log(firebase.auth().currentUser.email);
-        console.log(this.state.authUser);
+        console.log(
+          "firebase user mail:\t" + firebase.auth().currentUser.email
+        );
+        console.log("state user:\t\t" + this.state.authUser);
       } else {
         console.log("null");
       }
     });
+    console.log(firebase.auth().currentUser);
+    console.log(this.state.authUser);
   }
 }
 

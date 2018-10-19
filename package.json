@@ -21,7 +21,9 @@
     "fire": "firebase login && firebase init",
     "deploy": "react-scripts build && firebase deploy",
     "push": "git add -A -v && git commit -m 'generic: npm push' -v && git push -v || true",
-    "pull": "git pull"
+    "pull": "git pull",
+    "create-comp": ".my_scripts/create-react-comp.sh",
+    "create-view": ".my_scripts/create-react-view.sh"
   },
   "devDependencies": {
     "webpack-cli": "^3.1.2",

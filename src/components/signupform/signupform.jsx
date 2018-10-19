@@ -71,16 +71,16 @@ class LoginForm extends Component {
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password1)
       .then(() => {
-        firebase.auth().currentUser.sendEmailVerification;
+        firebase.auth().currentUser.sendEmailVerification();
+
         this.setState({ email: "" });
         this.setState({ password: "" });
         this.setState({ error: "" });
-        console.log("done.1");
+
         console.log(firebase.auth().currentUser.email);
-        console.log("done.2");
+        console.log("done");
       })
       .catch(error => {
-        console.log(error);
         this.setState({ error: error });
       });
     if (event) {
