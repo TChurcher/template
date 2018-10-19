@@ -1,0 +1,6 @@
+# some cache files
+node_modules/.cache
+
+# some log files
+npm-debug.log
+
