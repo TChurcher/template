@@ -7,6 +7,7 @@ import Home from "./views/home/home";
 import Login from "./views/login/login";
 import SignUp from "./views/signup/signup";
 import DataSecurity from "./views/datasecurity/datasecurity";
+import Game from "./views/game/game";
 
 import { firebase } from "./firebase";
 
@@ -15,7 +16,7 @@ class App extends Component {
     meta: {
       company_name: "FIRMA GmbH"
     },
-    authUser: "Home"
+    authUser: null
   };
 
   render() {
@@ -67,6 +68,15 @@ class App extends Component {
               </div>
             )}
           />
+          <Route
+            exact={true}
+            path="/game"
+            render={() => (
+              <div className="App">
+                <Game meta={this.state.meta} title="A Game" />
+              </div>
+            )}
+          />
         </div>
       </BrowserRouter>
     );
@@ -78,15 +88,11 @@ class App extends Component {
         ? this.setState({ authUser: firebase.auth().currentUser.email })
         : this.setState({ authUser: null });
       if (firebase.auth().currentUser) {
-        console.log(
-          "firebase user mail:\t" + firebase.auth().currentUser.email
-        );
-        console.log("state user:\t\t" + this.state.authUser);
+        console.log("actual user:\t\t" + this.state.authUser);
       } else {
         console.log("null");
       }
     });
-    console.log(firebase.auth().currentUser);
     console.log(this.state.authUser);
   }
 }

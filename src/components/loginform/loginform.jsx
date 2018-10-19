@@ -52,8 +52,7 @@ class LoginForm extends Component {
         this.setState({ email: "" });
         this.setState({ password: "" });
         this.setState({ error: "" });
-        console.log("done.");
-        console.log(firebase.auth().currentUser.email);
+        window.location = "/";
       })
       .catch(error => {
         console.log(error);

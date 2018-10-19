@@ -31,6 +31,11 @@ class Header extends Component {
                   home
                 </a>
               </li>
+              <li>
+                <a className="a-navi" href="/game">
+                  game
+                </a>
+              </li>
             </ul>
           </div>
           <div className="grid-header-item">

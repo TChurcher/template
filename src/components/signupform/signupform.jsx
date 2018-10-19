@@ -10,7 +10,7 @@ class LoginForm extends Component {
     email: "",
     password1: "",
     password2: "",
-    error: ""
+    message: ""
   };
 
   render() {
@@ -56,7 +56,7 @@ class LoginForm extends Component {
           />
         </label>
         <br />
-        {this.printError(this.state.error)}
+        {this.PrintMessage(this.state.message)}
         <button type="submit" id="submit">
           Sign Up
         </button>
@@ -65,34 +65,34 @@ class LoginForm extends Component {
   }
 
   onSubmit = event => {
-    console.log(this.state.email);
-    console.log(this.state.password1);
     firebase
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password1)
       .then(() => {
+        //this.setState({ email: "" });
+        //this.setState({ password: "" });
+        this.setState({ message: "" });
+
         firebase.auth().currentUser.sendEmailVerification();
-
-        this.setState({ email: "" });
-        this.setState({ password: "" });
-        this.setState({ error: "" });
-
-        console.log(firebase.auth().currentUser.email);
-        console.log("done");
+        console.log("sing up:\t\t" + firebase.auth().currentUser.email);
+        this.setState({ message: "Account created!" });
+        console.log("message:\t\t" + this.state.message);
+        //window.location = "/";
       })
-      .catch(error => {
-        this.setState({ error: error });
+      .catch(message => {
+        this.setState({ message: message.message });
+        console.log("message:\t\t" + this.state.message);
       });
     if (event) {
       event.preventDefault();
     }
   };
 
-  printError(error) {
-    if (error) {
+  PrintMessage(message) {
+    if (message) {
       return (
         <React.Fragment>
-          {error.message} <br />
+          {message} <br />
           <br />
         </React.Fragment>
       );

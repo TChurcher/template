@@ -34,3 +34,8 @@ class $1 extends Component {
  
 export default $1;" \
 > ${dir}/${name}.jsx
+
+echo "you may want to include the following lines of code:"
+echo "import $1 from './components/${name}/${name}';"
+echo "import $1 from '../../components/${name}/${name}';"
+
