@@ -1,5 +1,5 @@
-# some cache files
-node_modules/.cache
+node_modules
+.firebase
 
 # some log files
 npm-debug.log
