@@ -1,0 +1,31 @@
+.grid-game {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+  grid-gap: 0px;
+  padding: 0px 0px 0px 0px;
+  width: 100%;
+}
+
+.grid-game > div {
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+}
+
+span {
+  margin: 5px;
+  width: 95%;
+  font-size: 14px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.button-game {
+  width: 95%;
+  margin-top: 3.5%;
+  height: 84%;
+  font-size: 14px;
+}
