@@ -1,6 +1,9 @@
 :root {
-  --color_back: #fafafa;
   --light_back: #ffffff;
+  --color_back: #fafafa;
+  --middle1_back: #f2f2f2;
+  --middle2_back: #ebebeb;
+  --middle3_back: #dadada;
   --dark_back: #394648;
 
   --dark_text: #222222;

@@ -13,9 +13,11 @@ class SignUp extends Component {
       <React.Fragment>
         <Header title={this.props.title} />
         <Main>
-          <Container title="Sign Up" footer={<div>Create a new Account.</div>}>
-            <SignUpForm />
-          </Container>
+          <Container
+            title="Sign Up"
+            entries={[<SignUpForm />]}
+            footer={<div>Create a new Account.</div>}
+          />
         </Main>
         <Footer />
       </React.Fragment>

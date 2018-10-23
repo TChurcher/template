@@ -15,6 +15,7 @@ class Login extends Component {
         <Main>
           <Container
             title="Log In"
+            entries={[<LoginForm />]}
             footer={
               <div>
                 No Account Yet?
@@ -24,9 +25,7 @@ class Login extends Component {
                 </a>
               </div>
             }
-          >
-            <LoginForm />
-          </Container>
+          />
         </Main>
         <Footer />
       </React.Fragment>

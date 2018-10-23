@@ -8,6 +8,7 @@ import Login from "./views/login/login";
 import SignUp from "./views/signup/signup";
 import DataSecurity from "./views/datasecurity/datasecurity";
 import Game from "./views/game/game";
+import Questions from "./views/questions/questions";
 
 import { firebase } from "./firebase";
 
@@ -74,6 +75,15 @@ class App extends Component {
             render={() => (
               <div className="App">
                 <Game meta={this.state.meta} title="A Game" />
+              </div>
+            )}
+          />
+          <Route
+            exact={true}
+            path="/questions"
+            render={() => (
+              <div className="App">
+                <Questions meta={this.state.meta} title="Questions" />
               </div>
             )}
           />

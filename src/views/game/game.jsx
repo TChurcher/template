@@ -14,14 +14,13 @@ class Game extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header title={this.state.title} />
+        <Header title={this.props.title} />
         <Main>
           <Container
             title="This is a Game."
+            entries={[<ClickGame />]}
             footer="Please waste your time here."
-          >
-            <ClickGame />
-          </Container>
+          />
         </Main>
         <Footer />
       </React.Fragment>

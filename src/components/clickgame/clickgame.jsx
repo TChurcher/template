@@ -23,54 +23,57 @@ class ClickGame extends Component {
     return (
       <React.Fragment>
         <div className="grid-game">
-          <div className="game">
-            <span> {this.state.player.name} </span>
+          <div className="div-game">
+            <span className="span-game"> {this.state.player.name} </span>
           </div>
-          <div className="game">
+          <div className="div-game">
             {" "}
-            <span> {this.state.perTick} $ per tick </span>{" "}
+            <span className="span-game">
+              {" "}
+              {this.state.perTick} $ per tick{" "}
+            </span>{" "}
           </div>
-          <div className="game">
-            <span> {this.state.player.money} $ </span>
+          <div className="div-game">
+            <span className="span-game"> {this.state.player.money} $ </span>
           </div>
 
-          <div className="game">
+          <div className="div-game">
             <br />
           </div>
-          <div className="game"> </div>
-          <div className="game"> </div>
+          <div className="div-game"> </div>
+          <div className="div-game"> </div>
 
-          <div className="game">
-            <span> name </span>
+          <div className="div-game">
+            <span className="span-game"> name </span>
           </div>
-          <div className="game">
+          <div className="div-game">
             <div className="grid-game">
-              <div className="game">
-                <span> on_tick </span>
+              <div className="div-game">
+                <span className="span-game"> on_tick </span>
               </div>
-              <div className="game">
-                <span> upgrade </span>
+              <div className="div-game">
+                <span className="span-game"> upgrade </span>
               </div>
-              <div className="game">
-                <span> level </span>
+              <div className="div-game">
+                <span className="span-game"> level </span>
               </div>
             </div>
           </div>
-          <div className="game">
-            <span> buy </span>
+          <div className="div-game">
+            <span className="span-game"> buy </span>
           </div>
 
-          <div className="game">
+          <div className="div-game">
             <button className="button-game" onClick={() => this.handleClick()}>
               click
             </button>
           </div>
-          <div className="game">
+          <div className="div-game">
             <div className="grid-game">
-              <div className="game">
-                <span> {this.state.perClick} $ </span>
+              <div className="div-game">
+                <span className="span-game"> {this.state.perClick} $ </span>
               </div>
-              <div className="game">
+              <div className="div-game">
                 <button
                   className="button-game"
                   onClick={() => this.handleBuy()}
@@ -78,26 +81,29 @@ class ClickGame extends Component {
                   {this.getUpgradeCosts()} $
                 </button>
               </div>
-              <div className="game">
-                <span> {this.state.level} </span>
+              <div className="div-game">
+                <span className="span-game"> {this.state.level} </span>
               </div>
             </div>
           </div>
-          <div className="game">
+          <div className="div-game">
             <button className="button-game" onClick={() => this.handleBuy()}>
               {this.getBuyCosts()} $
             </button>
           </div>
 
-          <div className="game">
-            <span> {this.state.fabric.name} </span>
+          <div className="div-game">
+            <span className="span-game"> {this.state.fabric.name} </span>
           </div>
-          <div className="game">
+          <div className="div-game">
             <div className="grid-game">
-              <div className="game">
-                <span> {this.state.fabric.generate()} $ </span>
+              <div className="div-game">
+                <span className="span-game">
+                  {" "}
+                  {this.state.fabric.generate()} ${" "}
+                </span>
               </div>
-              <div className="game">
+              <div className="div-game">
                 <button
                   className="button-game"
                   onClick={() => this.handleBuy(this.state.fabric)}
@@ -105,12 +111,15 @@ class ClickGame extends Component {
                   {this.state.fabric.upgradeCosts} $
                 </button>
               </div>
-              <div className="game">
-                <span> {this.state.fabric.quantity} </span>
+              <div className="div-game">
+                <span className="span-game">
+                  {" "}
+                  {this.state.fabric.quantity}{" "}
+                </span>
               </div>
             </div>
           </div>
-          <div className="game">
+          <div className="div-game">
             {" "}
             <button
               className="button-game"

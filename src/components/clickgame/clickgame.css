@@ -15,17 +15,26 @@
   height: 100%;
 }
 
-span {
+.button-game {
+  display: inline;
   margin: 5px;
   width: 95%;
+  height: 84%;
   font-size: 14px;
   padding-left: 0;
   padding-right: 0;
+  cursor: pointer;
 }
 
-.button-game {
+.container {
+  max-width: 50px;
+}
+
+.span-game {
+  margin: 5px;
   width: 95%;
-  margin-top: 3.5%;
   height: 84%;
   font-size: 14px;
+  padding-left: 0;
+  padding-right: 0;
 }

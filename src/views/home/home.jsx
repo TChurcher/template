@@ -15,12 +15,16 @@ class Home extends Component {
       <React.Fragment>
         <Header title={this.props.title} />
         <Main>
-          <Container title="This is Doggy." footer="Doggy is a good boy.">
-            <img
-              src="https://s7d2.scene7.com/is/image/PetSmart/SV0401_CATEGORY_HERO-Dog-Dog-20160818?$SV0401$"
-              alt="SWEET<3"
-            />
-          </Container>
+          <Container
+            title="This is Doggy."
+            entries={[
+              <img
+                src="https://s7d2.scene7.com/is/image/PetSmart/SV0401_CATEGORY_HERO-Dog-Dog-20160818?$SV0401$"
+                alt="SWEET<3"
+              />
+            ]}
+            footer="Doggy is a good boy."
+          />
         </Main>
         <Footer />
       </React.Fragment>
