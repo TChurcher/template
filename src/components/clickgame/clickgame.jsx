@@ -99,8 +99,7 @@ class ClickGame extends Component {
             <div className="grid-game">
               <div className="div-game">
                 <span className="span-game">
-                  {" "}
-                  {this.state.fabric.generate()} ${" "}
+                  {this.state.fabric.generate()} $
                 </span>
               </div>
               <div className="div-game">
@@ -112,10 +111,7 @@ class ClickGame extends Component {
                 </button>
               </div>
               <div className="div-game">
-                <span className="span-game">
-                  {" "}
-                  {this.state.fabric.quantity}{" "}
-                </span>
+                <span className="span-game">{this.state.fabric.quantity}</span>
               </div>
             </div>
           </div>
@@ -175,7 +171,7 @@ class ClickGame extends Component {
   }
 
   getUpgradeCosts() {
-    return Math.round(500 * Math.pow(1.5, this.state.level));
+    return Math.round(500 * Math.pow(1.5, 1));
   }
 }
 

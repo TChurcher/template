@@ -4,7 +4,6 @@ import Footer from "../../components/footer/footer";
 import Main from "../../components/main/main";
 import Container from "../../components/container/container";
 import ClickGame from "../../components/clickgame/clickgame";
-import Player from "../../components/clickgame/player";
 
 import "./game.css";
 

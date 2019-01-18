@@ -19,8 +19,10 @@ class Container extends Component {
 
   showEntries() {
     if (this.state.entries) {
-      return this.state.entries.map(entry => (
-        <div className="container-main">{entry}</div>
+      return this.state.entries.map((entry, index) => (
+        <div key={index} className="container-main">
+          {entry}
+        </div>
       ));
     }
   }

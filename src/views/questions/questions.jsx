@@ -26,27 +26,17 @@ class Questions extends Component {
                 question="Warum sind Bananen meistens leicht gebogen und nur sehr selten gerade?"
                 answers={[
                   <Answer
-                    question="weil niemand in den Urwald zog und die Banane gerade bog"
-                    onClick={() => this.handleClick(true)}
+                    answer="weil niemand in den Urwald zog und die Banane gerade bog"
+                    value={true}
                   />,
                   <Answer
-                    question="answer2"
-                    onClick={() => this.handleClick(false)}
+                    answer="damit sie als Bananen erkannt werden können"
+                    value={false}
                   />,
                   <Answer
-                    question="asnwer3"
-                    onClick={() => this.handleClick(false)}
+                    answer="weil sie aufgrund der Erdrotation nur so wachsen können"
+                    value={true}
                   />
-                ]}
-              />,
-              <Question
-                question="Warum sind Äpfel rund?"
-                answers={[
-                  "answer1",
-                  "answer2",
-                  "asnwer3",
-                  "asnwer4",
-                  "asnwer5"
                 ]}
               />
             ]}

@@ -29,7 +29,7 @@ class App extends Component {
             path="/"
             render={() => (
               <div className="App">
-                <Home meta={this.state.meta} title={this.state.authUser} />
+                <Home meta={this.state.meta} title="Home" />
               </div>
             )}
           />
